@@ -15,11 +15,13 @@
   if(isset($_POST['auteur']) && !empty($_POST['auteur']) && isset($_POST['titre']) && !empty($_POST['titre']) && isset($_POST['contenu']) && !empty($_POST['contenu'])) {
     if(isset($_POST['auteur']) && !empty($_POST['auteur'])){  $auteur = htmlspecialchars($_POST['auteur']); } else { echo "<p style='color:red'>Écrivez votre nom.</p>"; }
     if(isset($_POST['titre']) && !empty($_POST['titre'])){  $titre = htmlspecialchars($_POST['titre']); } else { echo "<p style='color:red'>Écrivez un titre.</p>"; }
-    if(isset($_POST['contenu']) && !empty($_POST['contenu'])){  $contenu = htmlspecialchars($_POST['contenu']); } else { echo "<p style='color:red'>Écrivez votre texte.</p>"; }
+    if(isset($_POST['contenu']) && !empty($_POST['contenu'])){  $contenu = $_POST['contenu']; } else { echo "<p style='color:red'>Écrivez votre texte.</p>"; }
     $requete = $bdd->prepare('INSERT INTO billets(auteur, titre, contenu, date) VALUES(?,?,?,now())');
     $requete->execute(array($auteur,$titre,$contenu));
     echo "<p style='color:green'>Votre billet a été publié. </p>";
   }
 ?>
   <p><a href='index.php'>Revenir à la page d'accueil.</a></p>
+  <script src="js/tinymce/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea'});</script>
 <?php include("includes/footer.php"); ?>
