@@ -20,6 +20,7 @@
     echo "N° : " . $donnees['id'] . "<br>";
     echo "Auteur : " . $donnees['auteur']."<br>";
     echo "Titre : " . $donnees['titre']."<br>";
+    echo "Date : " . $donnees['date']."<br>";
     echo "Billet :<br> \"" . $donnees['contenu']."\" <br><br>";
   }
 //Affichage de la page en cours et de la navigation vers les autres pages
