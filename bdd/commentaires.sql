@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 24 Juillet 2017 à 15:27
+-- Généré le :  Mer 09 Août 2017 à 19:08
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -31,7 +31,7 @@ CREATE TABLE `commentaires` (
   `id_billet` int(11) NOT NULL,
   `auteur_commentaire` varchar(255) COLLATE utf8_bin NOT NULL,
   `contenu_commentaire` text COLLATE utf8_bin NOT NULL,
-  `date_commentaire` datetime NOT NULL
+  `date_commentaire` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -52,7 +52,7 @@ ALTER TABLE `commentaires`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `id_commentaire` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_commentaire` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
