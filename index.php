@@ -1,5 +1,5 @@
 <?php include("includes/header.php"); ?>
-<p><a href="publier.php"> Publier un billet de blog ! </a></p>
+<p><a href="publication_billet.php"> Publier un billet de blog ! </a></p>
 
 <?php //Affichage
 //Gestion du nombre limite de billets par page
@@ -19,7 +19,7 @@
 //Affichage de 10 billets
   $requete = $bdd->query('SELECT * FROM billets ORDER BY id_billet DESC LIMIT '.$premiere_entree.', '.$billets_par_page); // On récupère tout le contenu de la table billets, on affiche les 10 derniers messages par ordre anté-chronologique
   while ($donnees = $requete->fetch()){ // On affiche chaque entrée une à une
-    echo "Titre : <a href='billet.php?billet=" . $donnees['id_billet'] . "'>" . htmlspecialchars($donnees['titre_billet']). "</a><br>";
+    echo "Titre : <a href='affichage_billet.php?billet=" . $donnees['id_billet'] . "'>" . htmlspecialchars($donnees['titre_billet']). "</a><br>";
     echo "Auteur : " . htmlspecialchars($donnees['auteur_billet'])."<br>";
     echo "Date : " . htmlspecialchars($donnees['date_billet'])."<br>";
     echo "Billet :<br>" . $donnees['contenu_billet']."<br>";
