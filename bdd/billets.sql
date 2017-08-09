@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 09 Août 2017 à 19:08
+-- Généré le :  Mer 09 Août 2017 à 21:00
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -59,7 +59,9 @@ INSERT INTO `billets` (`id_billet`, `auteur_billet`, `titre_billet`, `contenu_bi
 (60, 'Le testeur fou !', 'Gros test de sécurité', '<p>&lt;p style="color:red;"&gt;Est-ce que je peux formater du texte en HTML et CSS depuis l\'&eacute;diteur TinyMCE ?!&lt;/p&gt;</p>', '2017-07-23 19:54:54'),
 (61, 'Le testeur fou !', 'Et là, ça fonctionne ?', '<p style="color:red;">Est-ce que je peux formater du texte en HTML et CSS depuis l\'éditeur TinyMCE quand je désactive le JavaScript ?!</p>', '2017-07-23 19:58:11'),
 (62, 'Le testeur fou !', 'coucou', '<p>je ne sais si j\'aime bien ce blog !</p>', '2017-07-24 14:24:49'),
-(63, 'Le testeur fou', 'ghfchufgyugyc', '<p>hftgcyuj<strong>ghijfcgnfty</strong>hjrtfcrfc</p>', '2017-07-24 14:51:26');
+(63, 'Le testeur fou', 'ghfchufgyugyc', '<p>hftgcyuj<strong>ghijfcgnfty</strong>hjrtfcrfc</p>', '2017-07-24 14:51:26'),
+(64, 'Le testeur fou reborn', 'le retour', '<p>:7</p>', '2017-08-09 19:38:09'),
+(65, 'Harmo', 'Les commentaires fonctionnent !', '<p>C\'est super, &ccedil;a fonctionne enfin !</p>', '2017-08-09 20:50:42');
 
 --
 -- Index pour les tables exportées
@@ -79,7 +81,7 @@ ALTER TABLE `billets`
 -- AUTO_INCREMENT pour la table `billets`
 --
 ALTER TABLE `billets`
-  MODIFY `id_billet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id_billet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
